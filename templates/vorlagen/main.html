@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Portfolie" content="Subash Sapkota">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Subash Sapkota's Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../static/css/style.css" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" >
+    <div class="container-fluid">
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active text-white" href="./">Home<span class="sr-only">(Current)</span> </a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="./about">About Me</a>
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="./education">Education</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="./skills">Skills</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="./experience">Experience</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="./projects">Projects</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-white" href="./contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+<hr />
+<!-- Error und Warnungen für den Nutzer-->
+{% if error is defined %}
+<div class="alert alert-info" role="alert">{{ error }}</div>
+{% endif %}
+{% if smsg is defined %}
+<div class="alert alert-success" role="alert">{{ smsg }}</div>
+{% endif %}
+
+<!-- Einbindung der restlichen Seiten -->
+<div class="container">
+    {% block content %} {% endblock %}
+</div>
+<hr />
+<footer class="text-center bg-light py-3">
+    <p>Contact me</p>
+    <p>
+        <a href="mailto:sapkotasubash4@gmail.com">sapkotasubash4@gmail.com</a>
+        |
+        <a href="https://linkedin.com/in/subash-sapkota-381643286" class="text-dark">
+            <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        |
+        <a href="https://github.com/Subash-sapkota" class="text-dark">
+            <i class="fab fa-github"></i> GitHub
+        </a>
+    </p>
+<div class="content">&copy; 2024 Subash Sapkota.</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

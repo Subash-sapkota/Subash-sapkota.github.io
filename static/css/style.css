@@ -1,0 +1,14 @@
+.required{
+    color:red;
+}
+.alert{
+   font-size:18px;
+}
+
+.alert-success{
+    color: forestgreen;
+}
+
+.alert-info{
+    color: red;
+}
